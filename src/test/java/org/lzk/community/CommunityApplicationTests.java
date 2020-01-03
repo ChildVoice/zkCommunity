@@ -1,4 +1,4 @@
-package org.lzk.Community;
+package org.lzk.community;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

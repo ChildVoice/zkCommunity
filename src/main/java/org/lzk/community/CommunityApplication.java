@@ -1,4 +1,4 @@
-package org.lzk.Community;
+package org.lzk.community;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
