@@ -6,8 +6,6 @@ import org.lzk.community.dto.AccessTokenDto;
 import org.lzk.community.dto.GithubUser;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-
 
 @Component
 public class GithubProvider {
@@ -25,9 +23,9 @@ public class GithubProvider {
         try {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
-            System.out.println(string);
-            return string;
-        } catch (IOException e) {
+            String token = string.split("&")[0].split("=")[1];
+            return token;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -43,7 +41,7 @@ public class GithubProvider {
             String string = response.body().string();
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
             return githubUser;
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
