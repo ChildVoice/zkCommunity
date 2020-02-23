@@ -1,0 +1,2 @@
+alter table T_USER
+	add AVATAR_URL VARCHAR2(100);

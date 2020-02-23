@@ -17,3 +17,7 @@ create table T_USER
 );
 ```
 
+```flyway
+mvn flyway:migrate
+```
+

@@ -1,0 +1,2 @@
+alter table T_QUESTION
+	add CREATOR_NAME VARCHAR2(100);
